@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Archetype TextMatcher</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/colors.css') }}">
+<link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+</head>
+<body>
+<section>
+    <header>
+        <h1><a href="/">Archetype TextMatcher</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+    </nav>
+    <article>
+        {% block content %}
+        {% endblock %}
+    </article>
+</section>
+<footer><p class="right">© 2022 Bloom Institute of Technology</p></footer>
+</body>
+</html>

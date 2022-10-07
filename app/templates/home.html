@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h3>Which are you?</h3>
+    <ul>
+        <li>Hero</li>
+        <li>Caregiver</li>
+        <li>Explorer</li>
+        <li>Rebel</li>
+        <li>Lover</li>
+        <li>Artist</li>
+        <li>Entertainer</li>
+        <li>Sage</li>
+        <li>Magician</li>
+        <li>Ruler</li>
+    </ul>
+    <form method="post" action={{ url_for("home") }}>
+        <p>Describe yourself or someone you know...</p>
+        <p><label><textarea name="text">{{ text | safe }}</textarea></label></p>
+        <button type="submit" id="submit" name="submit">Predict Archetype
+        </button>
+        <br class="clear">
+    </form>
+    <h3>{{ result | safe }}</h3>
+{% endblock %}
